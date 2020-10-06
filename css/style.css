@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #64958f;
+}
+
+/* Top Of The Page */
+
+.top-container {
+    display: flex;
+    height: 15vh;
+    padding: 0 100px 0 100px;
+    align-items: center;
+    justify-content: space-between;
+    background: #065c6f;
+    color: #ffbb91;
+}
+
+.top-name {
+    font-family: Abril Fatface, Helvetica, sans-serif;
+    font-size: 45px;
+    cursor: default;
+    z-index: 10;
+}
+
+.fa-times-circle {
+    cursor: pointer;
+    transition: transform 0.4s;
+    z-index: 10;
+}
+
+.fa-rotate-45 {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+/* Form */
+
+.bookForm {
+    position: absolute;
+    top: -1000px;
+    width: 100%;
+    height: 85vh;
+    padding-top: 40px;
+    font-size: 25px;
+    font-family: "Ubuntu", sans-serif;
+    background: #065c6f;
+    color: #ffbb91;
+    transition: all 0.6s;
+    z-index: 1;
+}
+
+.active {
+    top: 15vh;
+}
+
+.form-elements {
+    width: 40%;
+    margin: 0 auto 25px auto;
+}
+
+.form-elements > input,
+.form-elements > button {
+    width: 100%;
+    height: 33px;
+    border-radius: 7px;
+    margin-top: 8px;
+    padding-left: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+}
+
+.form-elements > input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    width: 15%;
+    -ms-transform: scale(1.7); /* IE */
+    -moz-transform: scale(1.7); /* FF */
+    -webkit-transform: scale(1.7); /* Safari and Chrome */
+    -o-transform: scale(1.7); /* Opera */
+    transform: scale(1.7);
+}
+
+.form-elements > button[type="submit"] {
+    display: block;
+    width: 30%;
+    height: 50px;
+    padding: 0;
+    margin: 35px auto 0 auto;
+    background-color: #ffbb91;
+    color: #065c6f;
+    border: none;
+    font-weight: bolder;
+    font-size: 24px;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+.form-elements > button[type="submit"]:hover {
+    transform: scale(1.2);
+}
+
+/* Cards */
+
+.cardGroup {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 50px;
+    min-height: 60.5vh;
+    width: 85%;
+    margin: 50px auto 0 auto;
+    justify-content: space-around;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: default;
+    padding: 20px 0 15px 0;
+    width: 200px;
+    height: 285px;
+    background-color: #fcd4bc;
+    border-radius: 15px;
+    font-family: "Ubuntu", sans-serif;
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: scale(1.1);
+}
+
+.book-card:hover > .delete-card-active {
+    margin-top: -32px;
+    font-size: 24px;
+}
+
+.delete-card {
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    margin-left: 150px;
+    font-size: 0;
+    cursor: pointer;
+    color: #ffbb91;
+    transition: all 0.3s;
+}
+
+.card-name {
+    font-size: 32px;
+    flex-grow: 2;
+}
+
+.card-author-pages {
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.pages {
+    margin-top: 15px;
+    font-size: 19px;
+}
+
+.card-hasRead {
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Bottom */
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    padding: 10px 10px 0px 10px;
+    width: 100%;
+    height: 12vh;
+    margin-top: 30px;
+    background: #065c6f;
+    color: #ffbb91;
+    font-family: "Ubuntu", sans-serif;
+    justify-content: center;
+    font-size: 32px;
+}
+
+img {
+    height: 50px;
+    margin-top: 2p;
+    transition: all 0.4s;
+}
+
+img:hover {
+    -ms-transform: scale(1.2); /* IE */
+    -moz-transform: scale(1.2); /* FF */
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+    -o-transform: scale(1.2); /* Opera */
+    transform: scale(1.2);
+}
+
+footer > p {
+    margin-top: 6px;
+    cursor: default;
+}
