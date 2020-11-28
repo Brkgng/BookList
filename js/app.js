@@ -88,12 +88,12 @@ function toggleRead(bookHasRead) {
     }
 }
 
-function deleteCard(book) {
+function deleteCard(card) {
     books = books.filter((book) => {
-        return book.title != book.target.parentElement.firstChild.innerText;
+        return book.title != card.target.parentElement.firstChild.innerText;
     });
     updateLocalStorage();
-    book.target.parentElement.remove();
+    card.target.parentElement.remove();
 }
 
 formBtn.addEventListener("click", toggleForm);
